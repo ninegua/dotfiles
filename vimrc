@@ -1,4 +1,4 @@
-# Default to solarized dark scheme
+" Default to solarized dark scheme
 syntax on
 set background=dark
 colorscheme solarized
