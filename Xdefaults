@@ -3,6 +3,8 @@ xterm*faceNameDoublesize:   WenQuanYi Micro Hei Mono:scale=0.8
 xterm*utf8:                 1
 ! xterm*reverseVideo:         true
 ! xterm:highlightReverse:     false
+! xterm*selectToClipboard:    true
+XTerm*VT100.translations:#override <Btn1Up>:select-end(PRIMARY,CLIPBOARD,CUT_BUFFER0)
 
 ! Solarized color scheme for the X Window System
 !
