@@ -221,6 +221,7 @@ myLayout = avoidStruts (ThreeColMid nmaster delta third |||
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
+    , title     =? "qiv"            --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
