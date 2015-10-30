@@ -5,5 +5,6 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-eval `dircolors ~/.dircolors.ansi-dark`
+DIRCOLORS=`which dircolors || which gdircolors`
+test "${DIRCOLORS}" && eval `${DIRCOLORS} ~/.dircolors.ansi-dark`
 set -o vi
