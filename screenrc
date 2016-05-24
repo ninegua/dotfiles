@@ -1,0 +1,14 @@
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I"
+# tell screen how to set colors. AB = background, AF=foreground
+termcapinfo xterm 'Co#16:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+# erase background with current bg color
+defbce "on"
+# reset screen color after vim exits
+altscreen "on"
+# set scroll buffer size
+defscrollback 100000
+# recover LD_LIBRARY_PATH
+# setenv LD_LIBRARY_PATH $LD_LIBRARY_PATH_SCREEN
+
