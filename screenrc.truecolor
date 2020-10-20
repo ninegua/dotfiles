@@ -1,0 +1,21 @@
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+truecolor on
+attrcolor b ".I"
+# tell screen how to set colors. AB = background, AF=foreground
+# termcapinfo xterm* 'Co#16:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+# termcapinfo xterm* 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+term "screen-256color"
+# erase background with current bg color
+defbce "on"
+# reset screen color after vim exits
+altscreen "on"
+# set scroll buffer size
+defscrollback 100000
+# recover LD_LIBRARY_PATH
+# setenv LD_LIBRARY_PATH $LD_LIBRARY_PATH_SCREEN
+# enable utf8
+setenv SSH_AUTH_SOCK $HOME/.ssh/auth_sock
+defutf8 on
+utf8 on on
+bindkey -d ^? stuff ^H
